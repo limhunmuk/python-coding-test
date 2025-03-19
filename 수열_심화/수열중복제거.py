@@ -3,7 +3,6 @@
 def recur(cnt) :
     
     if(cnt == M) :
-    
         print(*arr)
         return
     
@@ -12,11 +11,11 @@ def recur(cnt) :
         
         #print("============= >", cnt)
     
-       #if i in arr :
-       #     continue
-               
+        if i in arr : # 중복제거 부분
+            #print(" 임시 출력 arr => ", *arr)
+          continue
+    
         arr.append(i)
-        #print("print => ", *arr)
         recur(cnt+1)
         arr.pop()
     
