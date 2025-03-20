@@ -11,9 +11,8 @@ def recur(cnt) :
         
         #print("============= >", cnt)
     
-        if i in arr : # 중복제거 부분
-            #print(" 임시 출력 arr => ", *arr)
-          continue
+        #if i in arr : # 중복제거 부분
+        #  continue
     
         arr.append(i)
         recur(cnt+1)
