@@ -12,7 +12,7 @@ N = int(input())
 arr = list(map(int, input().split()))
 
 DP = [1 for _ in range(N+1)]
-arr_cp = [1 for _ in range(N+1)]
+arr_cp = [0 for _ in range(N+1)]
 
 #print ("N ", N)
 #print ("M ", arr)
@@ -23,9 +23,9 @@ for i in range(N) :
     for j in range(i) :
         if arr[i] > arr[j] :
             DP[i] = max(DP[i], DP[j]+1)
-            arr_cp[i] = max(arr[i], arr[j]+1)
+        
             
             
 print(max(DP))
-print(arr_cp)
+#print(arr_cp)
             

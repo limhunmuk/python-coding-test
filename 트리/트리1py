@@ -1,0 +1,30 @@
+N = int(input())
+
+graph = [[] for _ in range(130)]
+
+for _ in range(N) :
+    a,b,c= map(str, input().split())
+    a=ord(a)
+    b=ord(b)
+    c=ord(c)
+    
+    graph[a].append(b)
+    graph[b].append(c)
+    
+
+#print(graph)
+
+def recur(node) :
+    if node == 46:
+        return
+    
+    print(chr(node))
+    if len(graph[node]) > 0:
+        recur(graph[node][0])
+    if len(graph[node]) > 1:
+        recur(graph[node][1])
+    
+print("======================")
+recur(65)
+
+    
